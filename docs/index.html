@@ -1,105 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sandsort — Support</title>
-  <meta name="description" content="Support and FAQ for Sandsort." />
-  <meta name="theme-color" content="#f7f4ec" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sandsort — Tip every jar to one color.</title>
+<meta name="description" content="A small pour-and-sort puzzle for iPhone. Tip jars of colored sand into each other until every jar is one color. No ads, no IAP, no clock." />
+<meta name="theme-color" content="#f5f0e4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="app.css" />
 </head>
 <body>
 <div class="page">
+  <header class="topnav">
+  <a class="brand" href="./" aria-label="Sandsort home">
+    <span class="mark">SA</span>
+    Sandsort
+    <span class="version">v1.0.0</span>
+  </a>
+  <nav class="nav-links" aria-label="Primary"><a href="#features" aria-current="page">Features</a><a href="#howtoplay">How to play</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/kiddkevin00/sandsort" rel="noopener" target="_blank">GitHub</a></nav>
+</header>
 
-  <header class="masthead">
-    <a class="wordmark" href="./" aria-label="Sandsort home">
-      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-      Sand <em>sort</em>
-    </a>
-    <nav class="topnav" aria-label="Primary">
-      <a href="./" aria-current="page">Support</a><a href="privacy.html">Privacy</a><a href="https://github.com/kiddkevin00/sandsort">GitHub</a>
-    </nav>
-  </header>
-
-  <section class="mast" aria-labelledby="mast-title">
-    <p class="eyebrow">Support<span class="dot"></span>The manual</p>
-    <h1 class="display" id="mast-title">
-      Sand<br>
-      <em>sort<span class="punct">.</span></em>
-    </h1>
-    <div class="mast-rule" aria-hidden="true"></div>
-    <p class="lede">A small pour-and-sort puzzle for iPhone. Tip jars of colored sand into each other until every jar is one color. <em>No ads, no IAP, no clock.</em></p>
-    <p class="meta">v1.0.0<span class="sep">·</span>iPhone · iOS 16+</p>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-eyebrow"><span class="beta-badge">Now in beta · iOS via Expo Go</span></p>
+    <h1 id="hero-title">Tip every jar to one color.</h1>
+    <p class="lede">A small pour-and-sort puzzle for iPhone. Tip jars of colored sand into each other until every jar is one color. No ads, no IAP, no clock.</p>
+    <div class="cta-row">
+      <a class="cta-primary" href="https://github.com/kiddkevin00/sandsort" rel="noopener" target="_blank">★ Star on GitHub</a>
+      <a class="cta-secondary" href="#howtoplay">How it works →</a>
+    </div>
+    <p class="trust-row"><span>Offline</span><span>No ads</span><span>No IAP</span><span>Open source</span></p>
   </section>
 
-  <main>
+  <section id="features" aria-labelledby="features-h">
+    <p class="eyebrow">Features</p>
+    <h2 id="features-h">What's in the build</h2>
+    <p class="subhead">The whole feature set, plainly listed — no upsells gating the basics.</p>
+    <div class="feature-grid">
+      <article class="feature-card"><span class="feature-icon">⇣</span><h3>Tap, tap, pour</h3><p>Tap a jar to lift it, tap another to pour. The whole top run of the source color transfers at once.</p></article>
+      <article class="feature-card"><span class="feature-icon">◖</span><h3>8 sequential levels</h3><p>3 colors → 8 colors, 1–2 spare jars. Levels unlock as you clear them.</p></article>
+      <article class="feature-card"><span class="feature-icon">↶</span><h3>Full undo</h3><p>Move history is preserved; Undo walks back one pour at a time. No 'watch ad to undo'.</p></article>
+      <article class="feature-card"><span class="feature-icon">⤳</span><h3>Deterministic deals</h3><p>Every deal is generated from a Mulberry32 seed; the same seed reproduces the same board. New deal reshuffles within the level.</p></article>
+      <article class="feature-card"><span class="feature-icon">⊞</span><h3>No trivial openings</h3><p>Generator reshuffles to avoid starting with a jar that's already one color. Every level needs at least a few pours to feel a level.</p></article>
+      <article class="feature-card"><span class="feature-icon">◷</span><h3>Best moves saved</h3><p>Per-level best move count is tracked. Fewer is better.</p></article>
+    </div>
+  </section>
 
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">01</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Overview</p>
-        <h2>How to play</h2>
-        <p>Tap a jar to pick it up — the jar lifts. Tap another jar to pour the top color of the picked-up jar into it. You can only pour onto an <strong>empty</strong> jar or onto sand of the <strong>same color</strong>. The whole top run pours at once, or as much as fits.</p><ul><li>Each level finishes when every jar is one color (or empty).</li><li><strong>Undo</strong> walks back the move history one step at a time.</li><li><strong>Restart</strong> resets the same deal; <strong>New deal</strong> reshuffles the same level.</li><li>Best move count per level is recorded — fewer is better.</li></ul>
-      </section>
-    </article>
+  <section id="howtoplay" aria-labelledby="howto-h">
+    <p class="eyebrow">How to play</p>
+    <h2 id="howto-h">From cold-start to good-at-it</h2>
+    <p class="subhead">A few short steps. The app gets out of your way after that.</p>
+    <div class="steps-grid">
+      <article class="step-card"><span class="step-num">01</span><h3>Tap a jar</h3><p>It lifts to show it's selected.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Tap another jar</h3><p>If the destination is empty or its top matches the source's top color, the top run pours.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Sort everything</h3><p>Goal: every jar is one color (or empty). When the level clears, the next unlocks.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Use Undo freely</h3><p>Made a wrong call? Undo walks back. Restart resets the same deal. New deal reshuffles.</p></article>
+    </div>
+  </section>
 
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">02</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Origin</p>
-        <h2>Is this a clone of something?</h2>
-        <p>No. The pour-and-sort mechanic is a long-running puzzle pattern with many independent implementations (Water Sort, Ball Sort, Sand Sort, etc.). Sandsort is an original implementation with its own UI, code, color palette, and branding — no assets, naming, or layouts from any specific app are reused.</p>
-      </section>
-    </article>
-
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">03</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Levels</p>
-        <h2>How does difficulty progress?</h2>
-        <p>Levels add more colors and remove spare jars. Each new level unlocks once you clear the previous one. From the menu you can jump back to any unlocked level — your best move count for each one is shown there.</p>
-      </section>
-    </article>
-
-    <article class="doc">
-      <aside class="doc-num" aria-hidden="true">04</aside>
-      <section class="doc-body">
-        <p class="doc-eyebrow">Solvability</p>
-        <h2>What if I get stuck?</h2>
-        <p>Sandsort tells you when there are no pours available. <strong>Undo</strong> walks back the bad move; <strong>Restart</strong> resets the deal; <strong>New deal</strong> reshuffles. Every shuffle is generated to avoid trivially-sorted openings.</p>
-      </section>
-    </article>
-
-  </main>
-
-  <aside class="contact-card">
-    <p class="eyebrow">Card<span class="dot"></span>No. 01</p>
-    <h3>Need help, or want to <em>report a bug</em>?</h3>
-    <p>Open an issue on GitHub. There's no support email — issues are the canonical channel and they're public, which keeps everything honest.</p>
-    <p class="link-row"><a href="https://github.com/kiddkevin00/sandsort/issues">github.com/kiddkevin00/sandsort/issues</a></p>
-  </aside>
+  <section id="screenshots" aria-labelledby="shots-h">
+    <p class="eyebrow">Screenshots</p>
+    <h2 id="shots-h">What it looks like on a phone</h2>
+    <p class="subhead">Captured from the running app at iPhone 14 viewport.</p>
+    <div class="shots-empty">Screenshots from the running app are coming soon.</div>
+  </section>
 
   <footer class="colophon">
-    <div class="colophon-left">
-      <svg class="mark" viewBox="0 0 24 24" aria-hidden="true">
-  <rect x="3.2" y="3.2" width="13" height="15.5" rx="1.6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-  <rect x="7.8" y="7.8" width="13" height="15.5" rx="1.6" fill="var(--paper)" stroke="currentColor" stroke-width="1.5"/>
-</svg>
-      Sand <em>sort</em> · Mark Utility Labs
-    </div>
-    <nav class="colophon-meta" aria-label="Footer">
-      <a href="privacy.html">Privacy</a>
-      <a href="https://github.com/kiddkevin00/sandsort">Source</a>
-      <a href="https://github.com/kiddkevin00/sandsort/issues">Issues</a>
-    </nav>
-  </footer>
-
+  <span class="credit">© Mark Utility Labs · Made with care.</span>
+  <nav class="colophon-links" aria-label="Footer">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="https://github.com/kiddkevin00/sandsort" rel="noopener" target="_blank">GitHub</a>
+  </nav>
+</footer>
 </div>
 </body>
 </html>
