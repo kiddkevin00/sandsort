@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Sandsort",
+    "slug": "sandsort",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.markutilitylabs.sandsort",
+      "buildNumber": "1"
+    },
+    "android": {
+      "package": "com.markutilitylabs.sandsort",
+      "versionCode": 1
+    }
+  }
+}
