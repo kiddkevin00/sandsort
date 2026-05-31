@@ -2,19 +2,19 @@
 
 :root {
   --bg:          #f5f0e4;
-  --surface:     #fffefa;
+  --surface:     #fffefb;
   --ink:         #1f1a14;
   --ink-muted:   #5a534a;
   --ink-subtle:  #94897c;
   --rule:        #d8cfb9;
-  --rule-soft:   #ebe2cb;
+  --rule-soft:   #e7e0cb;
   --accent:      #c75a2a;
   --accent-deep: #8a3818;
   --accent-rgb:  199, 90, 42;
 
-  --font-display: 'Playfair Display', 'Iowan Old Style', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --font-mono:    'DM Mono', ui-monospace, monospace;
+  --font-display: 'Playfair Display', 'Hoefler Text', Georgia, serif;
+  --font-body:    'DM Sans', -apple-system, system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
 
   --shadow-card: 0 1px 2px rgba(0,0,0,0.05), 0 10px 24px -12px rgba(0,0,0,0.12);
   --measure: 40rem;
@@ -117,7 +117,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; text-underline-
 
 .hero {
   padding: 32px 0 64px;
-  text-align: center;
+  text-align: left;
 }
 
 .hero-eyebrow {
@@ -141,7 +141,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; text-underline-
   
 }
 
-.hero {{ margin-left: auto; margin-right: auto; }} .hero h1, .hero .lede {{ margin-left: auto; margin-right: auto; }}
+
 
 .hero .lede {
   font-size: clamp(18px, 2.2vw, 22px);
@@ -154,7 +154,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; text-underline-
 .cta-row {
   display: flex; gap: 12px; flex-wrap: wrap;
   margin-bottom: 28px;
-  justify-content: center;
+  
 }
 .cta-primary, .cta-secondary {
   display: inline-flex; align-items: center; gap: 8px;
@@ -178,7 +178,7 @@ a:hover { color: var(--accent-deep); text-decoration: underline; text-underline-
   font-family: var(--font-mono); font-size: 11px;
   letter-spacing: 0.12em; text-transform: uppercase;
   color: var(--ink-subtle);
-  justify-content: center;
+  
 }
 .trust-row span { display: inline-flex; align-items: center; gap: 6px; }
 .trust-row span::before {

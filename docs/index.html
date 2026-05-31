@@ -6,7 +6,7 @@
 <title>Sandsort — Tip every jar to one color.</title>
 <meta name="description" content="A small pour-and-sort puzzle for iPhone. Tip jars of colored sand into each other until every jar is one color. No ads, no IAP, no clock." />
 <meta name="theme-color" content="#f5f0e4" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -28,7 +28,7 @@
       <a class="cta-primary" href="https://github.com/kiddkevin00/sandsort" rel="noopener" target="_blank">★ Star on GitHub</a>
       <a class="cta-secondary" href="#howtoplay">How it works →</a>
     </div>
-    <p class="trust-row"><span>Offline</span><span>No ads</span><span>No IAP</span><span>Open source</span></p>
+    <p class="trust-row"><span>Offline-first</span><span>No ads</span><span>No IAP</span><span>Open source</span></p>
   </section>
 
   <section id="features" aria-labelledby="features-h">
@@ -36,12 +36,12 @@
     <h2 id="features-h">What's in the build</h2>
     <p class="subhead">The whole feature set, plainly listed — no upsells gating the basics.</p>
     <div class="feature-grid">
-      <article class="feature-card"><span class="feature-icon">⇣</span><h3>Tap, tap, pour</h3><p>Tap a jar to lift it, tap another to pour. The whole top run of the source color transfers at once.</p></article>
-      <article class="feature-card"><span class="feature-icon">◖</span><h3>8 sequential levels</h3><p>3 colors → 8 colors, 1–2 spare jars. Levels unlock as you clear them.</p></article>
-      <article class="feature-card"><span class="feature-icon">↶</span><h3>Full undo</h3><p>Move history is preserved; Undo walks back one pour at a time. No 'watch ad to undo'.</p></article>
-      <article class="feature-card"><span class="feature-icon">⤳</span><h3>Deterministic deals</h3><p>Every deal is generated from a Mulberry32 seed; the same seed reproduces the same board. New deal reshuffles within the level.</p></article>
-      <article class="feature-card"><span class="feature-icon">⊞</span><h3>No trivial openings</h3><p>Generator reshuffles to avoid starting with a jar that's already one color. Every level needs at least a few pours to feel a level.</p></article>
-      <article class="feature-card"><span class="feature-icon">◷</span><h3>Best moves saved</h3><p>Per-level best move count is tracked. Fewer is better.</p></article>
+      <article class="feature-card"><span class="feature-icon">▦</span><h3>Pour mechanic</h3><p>Tap a jar to lift it, tap another to pour. The whole top run of the source color pours at once — or as much as fits.</p></article>
+      <article class="feature-card"><span class="feature-icon">↺</span><h3>Full undo</h3><p>Move history is walked back one step at a time. No move count guilt; experiment freely.</p></article>
+      <article class="feature-card"><span class="feature-icon">▸</span><h3>Eight sequential levels</h3><p>5×5 → 8×8 boards, three to eight colors. Each level unlocks the next; jump back from the menu any time.</p></article>
+      <article class="feature-card"><span class="feature-icon">⥁</span><h3>Deterministic deals</h3><p>Mulberry32 PRNG generates per-seed deals. New layout reshuffles within the level; same seed always reproduces the same board.</p></article>
+      <article class="feature-card"><span class="feature-icon">✶</span><h3>Best-moves tracking</h3><p>Each level records your fewest-moves clear. Beat your own record.</p></article>
+      <article class="feature-card"><span class="feature-icon">✦</span><h3>Stuck detection</h3><p>When no pour is possible, the board surfaces a banner with guidance — Undo, Restart, or New layout.</p></article>
     </div>
   </section>
 
@@ -50,10 +50,11 @@
     <h2 id="howto-h">From cold-start to good-at-it</h2>
     <p class="subhead">A few short steps. The app gets out of your way after that.</p>
     <div class="steps-grid">
-      <article class="step-card"><span class="step-num">01</span><h3>Tap a jar</h3><p>It lifts to show it's selected.</p></article>
-      <article class="step-card"><span class="step-num">02</span><h3>Tap another jar</h3><p>If the destination is empty or its top matches the source's top color, the top run pours.</p></article>
-      <article class="step-card"><span class="step-num">03</span><h3>Sort everything</h3><p>Goal: every jar is one color (or empty). When the level clears, the next unlocks.</p></article>
-      <article class="step-card"><span class="step-num">04</span><h3>Use Undo freely</h3><p>Made a wrong call? Undo walks back. Restart resets the same deal. New deal reshuffles.</p></article>
+      <article class="step-card"><span class="step-num">01</span><h3>Tap a jar to pick it up</h3><p>The selected jar lifts. Tap it again to put it down without pouring.</p></article>
+      <article class="step-card"><span class="step-num">02</span><h3>Tap a second jar to pour</h3><p>Valid pours: empty target, or target's top color matches source's top color. The whole top run transfers, or as much as fits.</p></article>
+      <article class="step-card"><span class="step-num">03</span><h3>Clear every jar to one color</h3><p>Level completes when every jar is one solid color (or empty). The win modal shows your move count and best-yet for that level.</p></article>
+      <article class="step-card"><span class="step-num">04</span><h3>Undo or reshuffle</h3><p>Undo walks back one move at a time. Restart resets the same deal. New layout reshuffles the current level with a fresh seed.</p></article>
+      <article class="step-card"><span class="step-num">05</span><h3>Unlock the next level</h3><p>Clearing a level unlocks the next. From the menu, jump back to any unlocked level and see your best move count for each.</p></article>
     </div>
   </section>
 
@@ -61,7 +62,7 @@
     <p class="eyebrow">Screenshots</p>
     <h2 id="shots-h">What it looks like on a phone</h2>
     <p class="subhead">Captured from the running app at iPhone 14 viewport.</p>
-    <div class="shots-empty">Screenshots from the running app are coming soon.</div>
+    <div class="shots-grid"><figure class="shot-card"><img src="screenshots/01-jars.png" alt="Level 1 opening — three jars filled with sand and two empty. Pour to sort by color. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">01</span><span>Level 1 opening — three jars filled with sand and two empty. Pour to sort by color.</span></figcaption></figure><figure class="shot-card"><img src="screenshots/02-menu.png" alt="Menu modal — rules, level picker with locks, haptics toggle, Reset progress. screenshot" loading="lazy" /><figcaption class="shot-caption"><span class="n">02</span><span>Menu modal — rules, level picker with locks, haptics toggle, Reset progress.</span></figcaption></figure></div>
   </section>
 
   <footer class="colophon">

@@ -6,7 +6,7 @@
 <title>Sandsort — Support</title>
 <meta name="description" content="Support and FAQ for Sandsort." />
 <meta name="theme-color" content="#f5f0e4" />
-<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..700&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="app.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
   </section>
 
   <section style="padding-top:0">
-    <div class="faq"><details><summary>Is this a clone of something?</summary><p>No. The pour-and-sort mechanic (Water Sort, Ball Sort, Sand Sort) is a long-running puzzle pattern with many independent implementations. Sandsort is an original take with its own UI, palette, code, and branding.</p></details><details><summary>What if I'm truly stuck?</summary><p>Tap Undo to roll back, or Restart to reset the deal, or New deal to reshuffle within the level.</p></details><details><summary>Can I jump back to easier levels?</summary><p>Yes — the menu shows all unlocked levels and your best move count for each one.</p></details><details><summary>Why no timer?</summary><p>Because timing-pressuring puzzle games is a design choice that doesn't match this app's quiet positioning.</p></details></div>
+    <div class="faq"><details><summary>Is this a clone of any specific app?</summary><p>No. The pour-and-sort mechanic (Water Sort / Ball Sort / Sand Sort) is a generic puzzle pattern with many independent implementations. Sandsort is an original take with its own UI, palette, level curve, and code.</p></details><details><summary>How are levels generated?</summary><p>Each level mixes a fixed number of colors (3–8) into jars of capacity 4, then shuffles. The generator reshuffles up to eight times if a jar comes up trivially already-sorted, to avoid boring openings.</p></details><details><summary>What does New layout do?</summary><p>Reshuffles the current level with a fresh seed. Same level config (same number of colors and jars), different starting arrangement.</p></details><details><summary>What if I get into an impossible state?</summary><p>The board shows a 'No pours available' banner. Tap Undo to walk back, Restart to reset the deal, or New layout to reshuffle.</p></details><details><summary>Is anything sent anywhere?</summary><p>No. Current level, unlocked levels, best move counts, and the haptics setting are stored on this device only via AsyncStorage.</p></details></div>
   </section>
 
   <aside class="contact-card">
